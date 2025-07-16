@@ -3,9 +3,15 @@
 -- Add any additional keymaps here
 
 local map = vim.keymap.set
-map({ "n", "i", "x" }, "<C-b>", "<cmd>Neotree toggle<CR>", { desc = "Toggle Neotree" })
+map("n", "<C-b>", "<cmd>Neotree toggle<CR>", { desc = "Toggle Neotree" })
 map("n", "<C-s>", "<cmd>write<CR>", { desc = "Save file" })
-map({ "n", "i", "x" }, "<C-Left>", "<cmd>b<cr>")
-map({ "n", "i", "x" }, "<C-Right>", "<cmd>w<cr>")
-map({ "n", "x" }, "<C-PageUp>", "<cmd>bnext<cr>")
-map({ "n", "x" }, "<C-PageDown>", "<cmd>bprevious<cr>")
+
+map("n", "<C-PageUp>", "<cmd>bnext<cr>", { remap = true })
+map("n", "<C-PageDown>", "<cmd>bprevious<cr>", { remap = true })
+map("n", "<C-}>", "<cmd>bnext<cr>", { remap = true })
+map("n", "<C-{>", "<cmd>bprevious<cr>", { remap = true })
+
+map("n", "<C-Left>", "b", { remap = true })
+map("n", "<C-Right>", "w", { remap = true })
+map("n", "<C-Up>", "{", { remap = true })
+map("n", "<C-Down>", "}", { remap = true })
