@@ -7,17 +7,3 @@ opt.autochdir = true
 opt.smarttab = true
 opt.smartindent = true
 opt.autochdir = true
-opt.clipboard:append("unnamedplus")
-
-vim.g.clipboard = {
-  name = "wsl-clip",
-  copy = {
-    ["+"] = "clip.exe",
-    ["*"] = "clip.exe",
-  },
-  paste = {
-    ["+"] = "powershell.exe Get-Clipboard",
-    ["*"] = "powershell.exe Get-Clipboard",
-  },
-  cache_enabled = 0,
-}
