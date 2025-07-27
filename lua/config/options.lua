@@ -6,3 +6,4 @@ local opt = vim.opt
 opt.smarttab = true
 opt.smartindent = true
 opt.expandtab = true
+opt.autochdir = true
